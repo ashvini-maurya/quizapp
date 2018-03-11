@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios'
+import axios from 'axios';
+
+import OptionList from './component/optionList';
+
+
+const options = [
+  { id:"1option1", text: "Question 1 Option Text 1" },
+  { id:"1option2", text: "Question 1 Option Text 2" },
+  { id:"1option3", text: "Question 1 Option Text 3" },
+  { id:"1option4", text: "Question 1 Option Text 4" }
+];
+
 
 class App extends Component {
   constructor(){
@@ -19,9 +30,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{width: "250px"}}>
         <button className="button" onClick={this.handleClick}>Click Me</button>
         <p>{this.state.quiz}</p>
+        <OptionList options={options} />
       </div>  
     );
   }
