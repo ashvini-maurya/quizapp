@@ -43,10 +43,11 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      quiz: ''
+      ques_no: 0,
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.skipQuestion = this.skipQuestion.bind(this);
   }
 
   handleClick(){
@@ -54,12 +55,17 @@ class App extends Component {
       .then(response => this.setState({quiz: response.data.question_id_1.title}))
   }
 
+  skipQuestion(e){
+    console.log(e);
+    this.setState({ques_no: this.state.ques_no >= 3 ? this.state.ques_no : this.state.ques_no + 1})
+  }
+
   render() {
     return (
       <div style={{width: "250px"}}>
         <button className="button" onClick={this.handleClick}>Click Me</button>
         <p>{this.state.quiz}</p>
-        <Question question={question[0]} />
+        <Question question={question[this.state.ques_no]} onSkip={this.skipQuestion} />
       </div>  
     );
   }
