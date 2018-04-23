@@ -26,7 +26,7 @@ class App extends Component {
       const responseArr = Object.values(response.data);
       const newQuestion = responseArr.map(q => {
         return {
-          id: "question_key",
+          id: q.id,
           title: q.title,
           text: q.text,
           options: q.options
@@ -41,9 +41,10 @@ class App extends Component {
     .catch(error => console.log(error));
   }
 
-  skipQuestion(e){
+  skipQuestion(e) {
+    console.log(this.state.ques_no);
     console.log(e);
-    this.setState({ques_no: this.state.ques_no >= this.state.question.length ? this.state.ques_no : this.state.ques_no + 1})
+    this.setState({ques_no: this.state.ques_no >= this.state.question.length ? this.state.ques_no : this.state.ques_no + 1});
   }
 
   render() {

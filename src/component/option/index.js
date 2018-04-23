@@ -1,9 +1,22 @@
 import React from 'react';
-import OptionList from '../optionList'
+import OptionList from '../optionList';
+import './option.css';
 
-const Option = (props) => <div style={{border: "1px solid gray", width: "250px", padding: "10px", display: "inline-flex", "marginLeft": "20px", "backgroundColor": "#EBEBEB"}}>
-        <input type="radio" name="action" key={props.id} onClick={() => console.log(props.id)}></input>
-        <h6>{props.name}</h6>
+function nextQuestion(e) {
+  console.log(this);
+  console.log("option button clicked");
+  console.log(e);
+  // this.setState({ques_no: this.state.ques_no >= this.state.question.length ? this.state.ques_no : this.state.ques_no + 1})
+  console.log("inside nextQuestion");
+}
+
+function Option(props) {
+  return (
+    <div className="option">
+      <input type="radio" name="action" key={props.id} onClick={(e) => nextQuestion(e)}></input>
+      <h6>{props.name}</h6>
     </div>
+  );
+}
 
-export default Option
+export default Option;

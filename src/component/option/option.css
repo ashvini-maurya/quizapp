@@ -1,0 +1,8 @@
+.option {
+    border: 1px solid gray;
+    width: 250px;
+    padding: 10px;
+    display: inline-flex;
+    margin-left: 20px;
+    background-color: #EBEBEB;
+}

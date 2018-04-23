@@ -1,0 +1,8 @@
+.question {
+  width: 580px;
+  margin-left: 50px;
+}
+
+.options-list, .button {
+  float: right;
+}
