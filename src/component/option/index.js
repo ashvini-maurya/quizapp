@@ -3,9 +3,9 @@ import OptionList from '../optionList';
 import './option.css';
 
 function nextQuestion(e) {
-  console.log(this);
-  console.log("option button clicked");
-  console.log(e);
+  // console.log(this);
+  // console.log("option button clicked");
+  // console.log(e);
   // this.setState({ques_no: this.state.ques_no >= this.state.question.length ? this.state.ques_no : this.state.ques_no + 1})
   console.log("inside nextQuestion");
 }

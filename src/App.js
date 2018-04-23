@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import OptionList from './component/optionList';
 import Question from './component/question';
+import Result from './component/result';
 
 class App extends Component {
   constructor(props){
@@ -42,8 +43,6 @@ class App extends Component {
   }
 
   skipQuestion(e) {
-    console.log(this.state.ques_no);
-    console.log(e);
     this.setState({ques_no: this.state.ques_no >= this.state.question.length ? this.state.ques_no : this.state.ques_no + 1});
   }
 
@@ -52,6 +51,7 @@ class App extends Component {
     return (
       <div style={{width: "250px"}}>
         <Question question={this.state.question[this.state.ques_no]} onSkip={this.skipQuestion} />
+        {this.state.ques_no === this.state.question.length && <Result />}
       </div>  
     );
   }
