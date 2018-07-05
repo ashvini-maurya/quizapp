@@ -43,6 +43,15 @@ class App extends Component {
     });
   };
 
+  nextQuestion = () => {
+    this.setState({
+      ques_no:
+        this.state.ques_no >= this.state.question.length
+          ? this.state.ques_no
+          : this.state.ques_no + 1
+    });
+  };
+
   render() {
     if (!this.state.question) return <p>failed</p>;
     return (
@@ -50,6 +59,7 @@ class App extends Component {
         <Question
           question={this.state.question[this.state.ques_no]}
           onSkip={this.skipQuestion}
+          nextQuestion={this.nextQuestion}
         />
         {this.state.ques_no === this.state.question.length && <Result />}
       </div>

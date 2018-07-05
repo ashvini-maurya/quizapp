@@ -17,6 +17,7 @@ function Question(props) {
         <OptionList
           options={_.get(question, "options", [])}
           className="options-list"
+          nextQuestion={props.nextQuestion}
         />
         <br />
         <button
