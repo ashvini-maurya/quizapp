@@ -1,6 +1,6 @@
 .question {
   width: 580px;
-  margin-left: 50px;
+  text-align: center;
 }
 
 .options-list, .button {

@@ -55,7 +55,7 @@ class App extends Component {
   render() {
     if (!this.state.question) return <p>failed</p>;
     return (
-      <div style={{ width: "250px" }}>
+      <div className="mainDiv">
         <Question
           question={this.state.question[this.state.ques_no]}
           onSkip={this.skipQuestion}
