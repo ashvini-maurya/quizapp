@@ -1,5 +1,5 @@
-import React from 'react';
-import './Result.css';
+import React from "react";
+import "./Result.css";
 
 function Result(props) {
   console.log("result component called");
@@ -7,7 +7,7 @@ function Result(props) {
     <div className="result">
       <p>We will display here the result of the Quizz!</p>
     </div>
-  )
+  );
 }
 
 export default Result;
