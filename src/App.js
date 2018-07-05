@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 
-import OptionList from './component/optionList';
-import Question from './component/question';
-import Result from './component/result';
+import OptionList from './components/OptionList/OptionList';
+import Question from './components/Question/Question';
+import Result from './components/Result/Result';
 
 class App extends Component {
   constructor(props){
@@ -21,7 +21,7 @@ class App extends Component {
 
   componentDidMount(){
     axios
-    .get("https://s3-ap-southeast-1.amazonaws.com/grow-fit-stage/uploads/quizapp/quiz.json")
+    .get("https://api.myjson.com/bins/hcbs4")
     .then(response => {
 
       const responseArr = Object.values(response.data);
