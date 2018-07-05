@@ -7,17 +7,10 @@ import Question from "./components/Question/Question";
 import Result from "./components/Result/Result";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      ques_no: 0,
-      question: []
-    };
-
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.skipQuestion = this.skipQuestion.bind(this);
-  }
+  state = {
+    ques_no: 0,
+    question: []
+  };
 
   componentDidMount() {
     axios
@@ -41,14 +34,14 @@ class App extends Component {
       .catch(error => console.log(error));
   }
 
-  skipQuestion(e) {
+  skipQuestion = e => {
     this.setState({
       ques_no:
         this.state.ques_no >= this.state.question.length
           ? this.state.ques_no
           : this.state.ques_no + 1
     });
-  }
+  };
 
   render() {
     if (!this.state.question) return <p>failed</p>;
