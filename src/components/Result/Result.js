@@ -1,5 +1,5 @@
 import React from 'react';
-import './result.css';
+import './Result.css';
 
 function Result(props) {
   console.log("result component called");

@@ -1,11 +1,9 @@
 import React from 'react';
-import OptionList from '../optionList';
+import OptionList from '../OptionList/OptionList';
 import _ from 'lodash';
-import './question.css';
+import './Question.css';
 
 function Question(props) {
-  // console.log("inside Question componennt")
-  // console.log(props);
   const { question, onSkip } = props;
   return (<div className="question">
     <div>

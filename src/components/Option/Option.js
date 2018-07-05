@@ -1,6 +1,6 @@
 import React from 'react';
-import OptionList from '../optionList';
-import './option.css';
+import OptionList from '../OptionList/OptionList';
+import './Option.css';
 
 function nextQuestion(e) {
   // console.log(this);

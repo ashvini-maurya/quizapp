@@ -1,5 +1,5 @@
 import React from 'react';
-import Option from '../option';
+import Option from '../Option/Option';
 import _ from 'lodash';
 
 function OptionList(props) {
